@@ -107,8 +107,8 @@ public:
 
     image_pub_ = it_.advertise("result", 1);
     debug_pub_ = it_.advertise("debug", 1);
-    marker_pub_ = nh_.advertise<aruco_msgs::MarkerArray>("markers", 100);
-    marker_list_pub_ = nh_.advertise<std_msgs::UInt32MultiArray>("markers_list", 10);
+    marker_pub_ = nh_.advertise<aruco_msgs::MarkerArray>("markers", 1);
+    marker_list_pub_ = nh_.advertise<std_msgs::UInt32MultiArray>("markers_list", 1);
 
     marker_msg_ = aruco_msgs::MarkerArray::Ptr(new aruco_msgs::MarkerArray());
     marker_msg_->header.frame_id = reference_frame_;
